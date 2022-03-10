@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fech</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+         border-bottom: 1px solid black;
+         display: flex;
+         justify-content: center;
+        }
+        .btn{
+    padding: 11px 54px;
+    margin: 19px;
+    border-radius: 20px;
+    background-color: lightblue;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrap" >
+        <button class="btn" onclick="printclick()">Fetch Post</button>
+        </div>
+        <ul id="wrapper">
+            <li>
+                <h5></h5>
+                <p></p>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <script>
+        function printclick() {
+            const fetchPost = fetch("https://jsonplaceholder.typicode.com/posts");
+
+            const main = document.getElementById("wrapper");
+            fetchPost.then(response => {
+                return response.json();
+            }).then(posts => {
+                main.innerHTML = listOfNames(posts);
+            });
+
+            function listOfNames(posts) {
+                const datList = posts.map(postdata => `<li><h5>${postdata.title}</h5><p>${postdata.body}</p></li> <hr>`)
+                    .join("\n");
+                return `${datList}`
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

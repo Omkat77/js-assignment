@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>calculator</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+  <link href='css/style.css' rel='stylesheet' type='text/css'>
+  <style>
+   
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+
+    <div class="header">Casio</div>
+
+    <div class="body">
+
+      <input id="input-box" readonly="readonly" class="input-box" type="text" name="cal" value="0" />
+      <input id="first-box" readonly="readonly" class="input-box" type="hidden" name="first" value="0" />
+      <input id="second-box" readonly="readonly" class="input-box" type="hidden" name="second" value="0" />
+      <input id="function-box" readonly="readonly" class="input-box" type="hidden" name="second" value="" />
+
+      <div class="keyspanel">
+        <div class="keysarea">
+          <a class="keys" id="one">1</a>
+          <a class="keys" id="two">2</a>
+          <a class="keys" id="three">3</a>
+          <a class="keys" id="div">/</a>
+          <a class="keys" id="four">4</a>
+          <a class="keys" id="five">5</a>
+          <a class="keys" id="six">6</a>
+          <a class="keys" id="mul">*</a>
+          <a class="keys" id="seven">7</a>
+          <a class="keys" id="eight">8</a>
+          <a class="keys" id="nine">9</a>
+          <a class="keys" id="sub">-</a>
+          <a class="keys" id="dot">.</a>
+          <a class="keys" id="zero">0</a>
+          <a class="keys" id="doublezero">00</a>
+          <a class="keys" id="add">+</a>
+        </div>
+        <div class="functions">
+          <a class="keys" id="clear">C</a>
+          <a class="keys" id="clearall">CA</a>
+          <a class="keys" id="backspace">&larr;</a>
+          <a class="keys equal" id="equal">=</a>
+        </div>
+      </div>
+      <textarea class="historyarea" id="history-box" placeholder="History:" readonly="readonly"></textarea>
+    </div>
+
+  </div>
+
+
+  <script src="js/script.js" type="text/javascript"></script>
+ <script src="js/cal.js"></script>
+</body>
+
+</html>
